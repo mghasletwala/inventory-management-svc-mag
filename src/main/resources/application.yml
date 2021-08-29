@@ -25,7 +25,8 @@ swagger:
   baseApiPackages:
   - "com.ibm.hello"
   - "com.ibm.health"
-  pathRegEx: []
+  - "com.ibm.inventory_management"
+  pathRegEx: [".*stock-item.*"]
   title: "${IMAGE_NAME:template-spring-boot}"
   description: "Description"
   version: "1.0.0"
