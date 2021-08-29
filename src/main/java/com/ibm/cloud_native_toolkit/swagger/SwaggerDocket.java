@@ -33,7 +33,7 @@ public class SwaggerDocket {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
                 .apis(buildApiRequestHandler()::test)
-                .paths(buildPathSelector()::test)
+                .paths(PathSelectors.regex(".*stock-item.*")::test)
                 .build()
                 .apiInfo(buildApiInfo());
     }
